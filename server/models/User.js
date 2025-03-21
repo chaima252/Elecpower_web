@@ -17,9 +17,16 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    phoneNumber: {
+        type: String,
+
+    },
     password: {
         type: String,
         required: true,
+    },
+    role: {
+        type: String,
     },
     profilePicture: {
         type: String,
@@ -29,6 +36,13 @@ const UserSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false,
+    },
+    failedLoginAttempts: {
+        type: Number,
+        default: 0, 
+    },
+    lockUntil: {
+        type: Number, 
     },
 
 

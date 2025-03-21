@@ -12,6 +12,8 @@ const port=process.env.PORT
 
 //! ROUTES
 require("./routes/Project.routes")(app)
+require("./routes/User.routes")(app)
+require("./routes/Auth.routes")(app)
 
 
 app.use((err, req, res, next) => {
